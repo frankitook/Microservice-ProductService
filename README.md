@@ -1,8 +1,8 @@
-#Microservice-ProductService
+# Microservice-ProductService
 
 This project is a microservice for product management that is part of a microservices architecture. The service handles product creation, retrieval, updating, and deletion, and is developed with Node.js for the backend.
 
-#Features
+# Features
 
 - Product Creation: Allow users to create new products with relevant details such as name, description, price, and images.
 - Product Retrieval: Retrieve a list of all products or a specific product by its unique identifier.
@@ -11,7 +11,7 @@ This project is a microservice for product management that is part of a microser
 - Integration with User Service: Authenticate users through JWT tokens to ensure secure access to product management functionalities.
 - Database Management: Uses Sequelize ORM for database interactions with MySQL.
   
-#Technologies Used
+# Technologies Used
 
 - Node.js: The runtime environment for executing JavaScript on the server side.
 - Express.js: A web application framework for Node.js, used to build the API.
