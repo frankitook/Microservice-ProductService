@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const base = require('../config/bd');
+const base = require('../configuration/db');
 
 const Producto = base.define('Producto', {
     idProducto: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
@@ -7,23 +7,20 @@ const Producto = base.define('Producto', {
     descripcion: { type: DataTypes.STRING, allowNull: false },
     precio: { type: DataTypes.FLOAT, allowNull: false },
     nroDni: {
-        type: DataTypes.INTEGER,
-        references: {
-            model: 'Personas',
-            key: 'nroDni'
-        }
+        type: DataTypes.INTEGER,  
+        allowNull: false 
     },
     idCategoria: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Subcategoria',
+            model: 'subcategorias',
             key: 'idCategoria'
         }
     },
     codSub: {
         type: DataTypes.INTEGER,
         references: {
-            model: 'Subcategoria',
+            model: 'subcategorias',
             key: 'codSub'
         }
     }

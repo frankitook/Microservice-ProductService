@@ -4,18 +4,19 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 const base = require('./configuration/db');
-const crypto = require('crypto');
 
 
-//const productRoutes = require('./routes/productRoutes');
-
+const categoriasRoutes = require('./routes/categoriaRoutes');
+const subcategoriasRoutes = require('./routes/subcategoriaRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 
 app.use(express.json());
 
+app.use('/categorias', categoriasRoutes);
+app.use('/subcategorias', subcategoriasRoutes);
+app.use('/products', productRoutes);
 
-
-//app.use('/products', productRoutes);
 
 
 
