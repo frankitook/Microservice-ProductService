@@ -11,7 +11,7 @@ const upload = multer({ storage });
 
 
 router.get('/', ProductoController.obtenerProductos);
-router.get('/:idProducto', productController.obtenerProductoPorId);
+router.get('/:idProducto', ProductoController.obtenerProductoPorId);
 
 router.post('/', upload.fields([
     { name: 'imagen1', maxCount: 1 },
