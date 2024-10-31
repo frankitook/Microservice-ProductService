@@ -9,4 +9,5 @@ const Categoria = base.define('Categoria', {
     timestamps: false
 });
 
+
 module.exports = Categoria;

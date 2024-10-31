@@ -4,13 +4,14 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 const base = require('./configuration/db');
+const cors= require('cors');
 
 
 const categoriasRoutes = require('./routes/categoriaRoutes');
 const subcategoriasRoutes = require('./routes/subcategoriaRoutes');
 const productRoutes = require('./routes/productRoutes');
 
-
+app.use(cors());
 app.use(express.json());
 
 app.use('/categorias', categoriasRoutes);
