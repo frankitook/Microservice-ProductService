@@ -10,4 +10,5 @@ const Categoria = base.define('Categoria', {
 });
 
 
+
 module.exports = Categoria;

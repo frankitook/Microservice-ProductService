@@ -8,6 +8,7 @@ const Producto = base.define('Producto', {
     imagen3: { type: DataTypes.BLOB('long'), allowNull: true }, 
     descripcion: { type: DataTypes.STRING, allowNull: false },
     precio: { type: DataTypes.FLOAT, allowNull: false },
+    stock: {type:DataTypes.INTEGER, allowNull: true},
     idCategoria: {
         type: DataTypes.INTEGER,
         references: {
